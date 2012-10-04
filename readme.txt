@@ -21,6 +21,8 @@ refresh: If you want to reload the screenshot if it wasn't generated on the firs
 
 All img-tags generated will have a class called "webscreenshot", which you can you to perform additional style stuff
 
+Feel free to make pull requests at https://github.com/jprberlin/web-screenshots
+
 == Installation ==
 
 Install like any other plugin
