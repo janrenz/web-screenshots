@@ -10,7 +10,7 @@ Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shor
 
 == Description ==
 
-With Usage of the wordpress.com inofficial webpage to screenshot function this plugins lets. For more information check http://bdisco.de/wordpress-plugins/ 
+With Usage of the wordpress.com inofficial webpage to screenshot function this plugins generates screenshots of websites. For more information check http://bdisco.de/wordpress-plugins/ 
 There are a few options you can use in your shortcode [webscreenshot]:
 
 url: full Url of the webpage which you want to have screenshoted (mandantory)
