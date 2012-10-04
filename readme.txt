@@ -10,11 +10,13 @@ Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shor
 
 == Description ==
 
-With Usage of the wordpress.com inofficial webpage to screenshot function this plugins lets. For more information check http://www.bdisco.de/ 
+With Usage of the wordpress.com inofficial webpage to screenshot function this plugins lets. For more information check http://bdisco.de/wordpress-plugins/ 
 There are a few options you can use in your shortcode [webscreenshot]:
 
 url: full Url of the webpage which you want to have screenshoted (mandantory)
+
 width: Pixel width of the screenshot (optional, default: 250)
+
 refresh: If you want to reload the screenshot if it wasn't generated on the first call (optional, default: true)
 
 All img-tags generated will have a class called "webscreenshot", which you can you to perform additional style stuff
