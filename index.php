@@ -3,7 +3,7 @@
  Plugin Name: Web Screenshots
  Plugin URI: http://wordpress.org/extend/plugins/web-screenshots/
  Description: Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shortcode [webscreenshot] with url and optional width param
- Version: 1.0
+ Version: 1.1
  Author: Jan Renz
  Author URI: http://bdisco.de
  License: GPLv2
@@ -38,7 +38,11 @@ class DGD_WebScreenshot {
     	extract( shortcode_atts( array(
     			'width' => 250,
     			'url' => 'http://wordpress.org',
-    			'refresh' => TRUE
+    			'newpage' => TRUE,
+                'link'    => TRUE,
+    			'refresh' => TRUE,
+    		
+    			
     	), $atts ) );
     	
     	if ($refresh && $width==400){
@@ -55,10 +59,22 @@ class DGD_WebScreenshot {
     	}
     	//build url
     	$imgUrl = $this->apiUrl . urlencode($url) .'?w='. $width;
-    	$output = '<img class="'.implode (' ', $cssclasses).'" data-refreshcounter="0" data-width="'.$width.'" data-src="'.$imgUrl.'" src="'.$imgUrl.'" width="'.$width.'"/>';
-	
+    	$output = '';
+    	if ($link)
+    	{
+    		$output .= '<a href="'. $url .'" title="'. $url .'" class="webscreenshot_link" ';
+    		if ($newpage)
+    		{
+    			$output .= ' target="_blank" ';
+    		}
+    		$output .= ' >';
+    	}
+    	$output .= '<img class="'.implode (' ', $cssclasses).'" data-refreshcounter="0" data-width="'.$width.'" data-src="'.$imgUrl.'" src="'.$imgUrl.'" width="'.$width.'"/>';
+    	if ($link)
+    	{
+    		$output .= '</a>';
+    	}
     	return $output;
-    }
-    
+    }  
 } 
 $_DGD_WebScreenshot = new DGD_WebScreenshot(); 

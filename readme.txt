@@ -3,10 +3,10 @@ Contributors: janrenz
 Tags: screenshot
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.0.0.
+Stable tag: 1.0.1
 License: GPLv2 or later
 
-Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shortcode [webscreenshot] with url and optional width param
+Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shortcode [webscreenshot] with url and some  optional params.
 
 == Description ==
 
@@ -19,7 +19,12 @@ width: Pixel width of the screenshot (optional, default: 250)
 
 refresh: If you want to reload the screenshot if it wasn't generated on the first call (optional, default: true)
 
-All img-tags generated will have a class called "webscreenshot", which you can you to perform additional style stuff
+link: link image to given url (optional, default: true) 
+
+newpage: open link in new page (optional, default: true) 
+
+
+All img-tags generated will have a class called "webscreenshot", the link will have a class called "webscreenshot-link" which you can you to perform additional style stuff
 
 Feel free to make pull requests at https://github.com/jprberlin/web-screenshots
 
@@ -28,6 +33,9 @@ Feel free to make pull requests at https://github.com/jprberlin/web-screenshots
 Install like any other plugin
 
 == Changelog ==
+
+= 1.0.1 =
+* Add link to image (request by Shawn). Use newpage and link param to change link behaviour.
 
 = 1.0.0 =
 * First Release
