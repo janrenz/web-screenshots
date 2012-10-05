@@ -44,6 +44,9 @@ class DGD_WebScreenshot {
     		
     			
     	), $atts ) );
+    	$newpage = filter_var($newpage, FILTER_VALIDATE_BOOLEAN);
+    	$link = filter_var($link, FILTER_VALIDATE_BOOLEAN);
+    	$refresh = filter_var($refresh, FILTER_VALIDATE_BOOLEAN);
     	
     	if ($refresh && $width==400){
     		// we need adiffernet size here to be able to detect default img
@@ -60,17 +63,17 @@ class DGD_WebScreenshot {
     	//build url
     	$imgUrl = $this->apiUrl . urlencode($url) .'?w='. $width;
     	$output = '';
-    	if ($link)
+    	if ($link == true)
     	{
     		$output .= '<a href="'. $url .'" title="'. $url .'" class="webscreenshot_link" ';
-    		if ($newpage)
+    		if ($newpage == true)
     		{
     			$output .= ' target="_blank" ';
     		}
     		$output .= ' >';
     	}
     	$output .= '<img class="'.implode (' ', $cssclasses).'" data-refreshcounter="0" data-width="'.$width.'" data-src="'.$imgUrl.'" src="'.$imgUrl.'" width="'.$width.'"/>';
-    	if ($link)
+    	if ($link == true)
     	{
     		$output .= '</a>';
     	}

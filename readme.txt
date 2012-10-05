@@ -3,7 +3,7 @@ Contributors: janrenz
 Tags: screenshot
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 
 Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shortcode [webscreenshot] with url and some  optional params.
@@ -33,6 +33,9 @@ Feel free to make pull requests at https://github.com/jprberlin/web-screenshots
 Install like any other plugin
 
 == Changelog ==
+
+= 1.0.2 =
+* Improved handling of boolean attributes. For example you now can use link=0, link="false", link="off", link="no"
 
 = 1.0.1 =
 * Add link to image (request by Shawn). Use newpage and link param to change link behaviour.
