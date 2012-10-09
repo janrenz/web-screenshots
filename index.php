@@ -3,7 +3,7 @@
  Plugin Name: Web Screenshots
  Plugin URI: http://wordpress.org/extend/plugins/web-screenshots/
  Description: Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shortcode [webscreenshot] with url and optional width param
- Version: 1.1
+ Version: 1.2.1
  Author: Jan Renz
  Author URI: http://bdisco.de
  License: GPLv2
