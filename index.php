@@ -41,6 +41,7 @@ class DGD_WebScreenshot {
     			'newpage' => TRUE,
                 'link'    => TRUE,
     			'refresh' => TRUE,
+    			'title' => ''
     		
     			
     	), $atts ) );
@@ -63,16 +64,20 @@ class DGD_WebScreenshot {
     	//build url
     	$imgUrl = $this->apiUrl . urlencode($url) .'?w='. $width;
     	$output = '';
+    	if ($title == ''){
+    		//
+    		$title = $url;
+    	}
     	if ($link == true)
     	{
-    		$output .= '<a href="'. $url .'" title="'. $url .'" class="webscreenshot_link" ';
+    		$output .= '<a href="'. $url .'" title="'. $title .'" class="webscreenshot_link" ';
     		if ($newpage == true)
     		{
     			$output .= ' target="_blank" ';
     		}
     		$output .= ' >';
     	}
-    	$output .= '<img class="'.implode (' ', $cssclasses).'" data-refreshcounter="0" data-width="'.$width.'" data-src="'.$imgUrl.'" src="'.$imgUrl.'" width="'.$width.'"/>';
+    	$output .= '<img alt="'.$alttext.'" class="'.implode (' ', $cssclasses).'" data-refreshcounter="0" data-width="'.$width.'" data-src="'.$imgUrl.'" src="'.$imgUrl.'" width="'.$width.'"/>';
     	if ($link == true)
     	{
     		$output .= '</a>';

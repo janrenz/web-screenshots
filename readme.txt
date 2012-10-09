@@ -23,6 +23,7 @@ link: link image to given url (optional, default: true)
 
 newpage: open link in new page (optional, default: true) 
 
+title: set link title tag (will be used as img alt tag also) (optional, default:'')
 
 All img-tags generated will have a class called "webscreenshot", the link will have a class called "webscreenshot-link" which you can you to perform additional style stuff
 
@@ -33,6 +34,8 @@ Feel free to make pull requests at https://github.com/jprberlin/web-screenshots
 Install like any other plugin
 
 == Changelog ==
+= 1.2 =
+* added attribute to set link title tag (will be used as alt tag for the img as well)
 
 = 1.1 =
 * Improved handling of boolean attributes. For example you now can use link=0, link="false", link="off", link="no"
