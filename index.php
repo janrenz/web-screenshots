@@ -3,7 +3,7 @@
  Plugin Name: Web Screenshots
  Plugin URI: http://wordpress.org/extend/plugins/web-screenshots/
  Description: Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shortcode [webscreenshot] with url and optional width param
- Version: 1.2.1
+ Version: 1.2.2
  Author: Jan Renz
  Author URI: http://bdisco.de
  License: GPLv2
@@ -77,7 +77,7 @@ class DGD_WebScreenshot {
     		}
     		$output .= ' >';
     	}
-    	$output .= '<img alt="'.$alttext.'" class="'.implode (' ', $cssclasses).'" data-refreshcounter="0" data-width="'.$width.'" data-src="'.$imgUrl.'" src="'.$imgUrl.'" width="'.$width.'"/>';
+    	$output .= '<img alt="'.$title.'" class="'.implode (' ', $cssclasses).'" data-refreshcounter="0" data-width="'.$width.'" data-src="'.$imgUrl.'" src="'.$imgUrl.'" width="'.$width.'"/>';
     	if ($link == true)
     	{
     		$output .= '</a>';
