@@ -3,7 +3,7 @@ Contributors: janrenz
 Tags: screenshot
 Requires at least: 3.0
 Tested up to: 3.4.2
-Stable tag: 1.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 
 Displays Thumbnails of a given URL usings wordpress.com inofficial API. Use Shortcode [webscreenshot] with url and some  optional params.
